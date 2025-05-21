@@ -12,9 +12,6 @@ document.getElementById("btnTinhLuong").onclick = function () {
   let tienLuong = 0;
   tienLuong = soNgayLam * 100000;
   console.log(tienLuong);
-  document.getElementById(
-    "resBai1"
-  ).innerHTML = `Tổng lương là ${tienLuong} VNĐ`;
   let tienLuongVNĐ = Number(tienLuong).toLocaleString("vi-VN", {
     style: "currency",
     currency: "VND",
