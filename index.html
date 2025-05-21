@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập JS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
+  
+  <div class="w-full text-center mb-6">
+  <p class="text-xl font-semibold text-blue-700">Nguyễn Mạnh Cường</p>
+  <p class="text-gray-600">Lớp: BCS16</p>
+</div>
+
+  <div class="w-full max-w-5xl bg-white shadow-xl rounded-2xl flex overflow-hidden">
+    
+    <!-- Sidebar Tabs -->
+    <div class="w-1/4 bg-gray-200 p-4 space-y-2">
+      <button class="w-full text-left py-2 px-3 rounded-lg bg-white shadow font-semibold" id="tab1-btn">Bài 1</button>
+      <button class="w-full text-left py-2 px-3 rounded-lg hover:bg-white" id="tab2-btn">Bài 2</button>
+      <button class="w-full text-left py-2 px-3 rounded-lg hover:bg-white" id="tab3-btn">Bài 3</button>
+      <button class="w-full text-left py-2 px-3 rounded-lg hover:bg-white" id="tab4-btn">Bài 4</button>
+      <button class="w-full text-left py-2 px-3 rounded-lg hover:bg-white" id="tab5-btn">Bài 5</button>
+    </div>
+
+    <!-- Tab Content Area -->
+    <div class="w-3/4 p-6 space-y-6 min-h-[500px] transition-all duration-300">
+      
+      <!-- Tab 1 -->
+      <div id="tab1" class="tab-content block">
+        <h2 class="text-2xl font-bold mb-4">Tính tiền lương nhân viên</h2>
+        <p class="mb-4">Lương 1 ngày: <strong>100.000 đồng</strong>, Hãy nhập số ngày đã làm việc dưới đây</p>
+        <input id="soNgayLamViec" type="number" placeholder="Số ngày bạn đã làm việc" class="w-full p-2 mb-4 border rounded-lg" />
+        <button id="btnTinhLuong" class="btnTinhLuong bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Tính lương</button>
+        <div id="resBai1" class="mt-4 text-green-600 font-semibold">Kết quả sẽ hiển thị ở đây</div>
+      </div>
+
+      <!-- Tab 2 -->
+      <div id="tab2" class="tab-content hidden">
+        <h2 class="text-2xl font-bold mb-4">Tính giá trị trung bình</h2>
+        <p class="mb-4">Tính giá trị trung bình của 5 số thực dưới đây:</p>
+        <div class="grid grid-cols-1 gap-3 mb-4">
+          <input id="soThuc1" type="number" step="any" placeholder="Số thứ 1" class="w-full p-2 border rounded-lg" />
+          <input id="soThuc2" type="number" step="any" placeholder="Số thứ 2" class="w-full p-2 border rounded-lg" />
+          <input id="soThuc3" type="number" step="any" placeholder="Số thứ 3" class="w-full p-2 border rounded-lg" />
+          <input id="soThuc4" type="number" step="any" placeholder="Số thứ 4" class="w-full p-2 border rounded-lg" />
+          <input id="soThuc5" type="number" step="any" placeholder="Số thứ 5" class="w-full p-2 border rounded-lg" />
+        </div>
+        <button id="btnTinhTrungBinh" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Tính trung bình</button>
+        <div id="resBai2" class="mt-4 text-green-600 font-semibold">Kết quả sẽ hiển thị ở đây</div>
+      </div>
+
+      <!-- Tab 3 -->
+      <div id="tab3" class="tab-content hidden">
+        <h2 class="text-2xl font-bold mb-4">Quy đổi tiền USD sang VNĐ</h2>
+        <p class="mb-4 italic">*Tỷ giá USD hôm nay: 1 USD = 23.500 VNĐ</p>
+        <input id="soUSD" type="number" step="any" placeholder="Nhập số USD bạn muốn quy đổi" class="w-full p-2 mb-4 border rounded-lg" />
+        <button id="btnQuyDoi" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Quy đổi thành VNĐ</button>
+        <div id="resBai3" class="mt-4 text-green-600 font-semibold">Kết quả sẽ hiển thị ở đây</div>
+      </div>
+
+      <!-- Tab 4 -->
+      <div id="tab4" class="tab-content hidden">
+        <h2 class="text-2xl font-bold mb-4">Tính diện tích, chu vi hình chữ nhật</h2>
+        <p class="mb-4">Hãy nhập chiều dài và chiều rộng hình chữ nhật</p>
+        <div class="grid grid-cols-1 gap-3 mb-4">
+          <input id="chieuDai" type="number" step="any" placeholder="Chiều dài" class="w-full p-2 border rounded-lg" />
+          <input id="chieuRong" type="number" step="any" placeholder="Chiều rộng" class="w-full p-2 border rounded-lg" />
+        </div>
+        <button id="btnTinhDienTichChuVi" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Tính diện tích, chu vi</button>
+        <div id="resBai4" class="mt-4 text-green-600 font-semibold">Kết quả sẽ hiển thị ở đây</div>
+      </div>
+
+      <!-- Tab 5 -->
+      <div id="tab5" class="tab-content hidden">
+        <h2 class="text-2xl font-bold mb-4">Tính tổng 2 ký số</h2>
+        <p class="mb-4">Hãy nhập vào 1 số có 2 chữ số để tính ký số</p>
+        <input id="so2ChuSo" type="number" placeholder="Nhập số có 2 chữ số" class="w-full p-2 mb-4 border rounded-lg" />
+        <button id="btnTinhTong" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Tính tổng 2 ký số</button>
+        <div id="resBai5" class="mt-4 text-green-600 font-semibold">Kết quả sẽ hiển thị ở đây</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript to switch tabs -->
+  <script>
+    const tabs = ["tab1", "tab2", "tab3", "tab4", "tab5"];
+    tabs.forEach((tab, index) => {
+      document.getElementById(`${tab}-btn`).addEventListener("click", () => {
+        tabs.forEach(t => {
+          document.getElementById(t).classList.add("hidden");
+          document.getElementById(`${t}-btn`).classList.remove("bg-white", "shadow", "font-semibold");
+        });
+        document.getElementById(tab).classList.remove("hidden");
+        document.getElementById(`${tab}-btn`).classList.add("bg-white", "shadow", "font-semibold");
+      });
+    });
+  </script>
+  <script src="./index.js"></script>
+</body>
+</html>
